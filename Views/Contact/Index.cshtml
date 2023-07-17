@@ -1,0 +1,105 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+@Html.Action("PartialHead", "Portfolio")
+
+<body>
+    <!-- header -->
+    @Html.Action("PartialNavbar", "Portfolio")
+    <!-- //header -->
+    <!-- contact breadcrumb -->
+    <section class="w3l-about-breadcrumb text-center">
+        <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+            <div class="container py-2">
+                <h2 class="title">Bana Ulaşın</h2>
+                <ul class="breadcrumbs-custom-path mt-2">
+                    <li><a href="~/Portfolio/Index">Anasayfa</a></li>
+                    <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> İletişim </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- contact breadcrumb -->
+    <!-- contact block -->
+    <!-- contact1 -->
+    <section class="w3l-contact-1 py-5">
+        <div class="contacts-9 py-lg-5 py-md-4">
+            <div class="container">
+                <div class="d-grid contact-view">
+                    <div class="cont-details">
+                        <div class="cont-top">
+                            <div class="cont-left text-center">
+                                <span class="fa fa-phone text-primary"></span>
+                            </div>
+                            <div class="cont-right">
+                                <h6>Beni ara</h6>
+                                <p>@ViewBag.phone</a></p>
+                            </div>
+                        </div>
+                        <div class="cont-top margin-up">
+                            <div class="cont-left text-center">
+                                <span class="fa fa-envelope-o text-primary"></span>
+                            </div>
+                            <div class="cont-right">
+                                <h6>Mail</h6>
+                                <p><a href="mailto:@ViewBag.mail" class="mail">@ViewBag.mail</a></p>
+                            </div>
+                        </div>
+                        <div class="cont-top margin-up">
+                            <div class="cont-left text-center">
+                                <span class="fa fa-map-marker text-primary"></span>
+                            </div>
+                            <div class="cont-right">
+                                <h6>Adres</h6>
+                                <p>@ViewBag.adrress</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-content-9">
+                        <form method="post">
+                            <div class="twice-two">
+                                <input type="text" class="form-control" name="NameSurname" id="w3lName" placeholder="Adınız"
+                                       required="">
+                                <input type="email" class="form-control" name="SenderMail" id="w3lSender" placeholder="Email"
+                                       required="">
+                            </div>
+                            <div class="twice">
+                                <input type="text" class="form-control" name="MessageSubject" id="w3lSubject"
+                                       placeholder="Konu" required="">
+                            </div>
+                            <textarea name="Content" class="form-control" id="w3lMessage" placeholder="Mesaj"
+                                      required=""></textarea>
+                            <div class="text-right">
+                                <button type="submit" class="btn btn-primary btn-style mt-4">Mesaj Gönder</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /contact1 -->
+    <div class="map-iframe">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12029.666294803203!2d29.01599705!3d41.081744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab66eb1aaff27%3A0x306025824b2de11e!2zTGV2ZW50LCAzNDMzMCBCZcWfaWt0YcWfL8Swc3RhbmJ1bA!5e0!3m2!1str!2str!4v1689519291278!5m2!1str!2str"
+                width="100%" height="400" frameborder="0" style="border: 0px;" allowfullscreen=""></iframe>
+    </div>
+    <!-- //contact block -->
+    <!-- Footer -->
+    @Html.Action("PartialFooter", "Portfolio")
+    <!-- //Footer -->
+    <!-- all js scripts and files here -->
+
+    @Html.Action("PartialScript", "Portfolio")
+
+</body>
+
+</html>

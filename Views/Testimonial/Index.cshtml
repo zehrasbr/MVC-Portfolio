@@ -1,0 +1,32 @@
+﻿@model List<CasgemPortfolio.Models.Entities.TblTestimonial>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2>Referans Listesi</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Ülke/Şehir</th>
+        <th>İçerik</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.TestimonialId</td>
+            <td>@item.NameSurname</td>
+            <td>@item.Country</td>
+            <td>@item.TestimonialContent</td>
+            <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialId" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialId" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+<a href="/Testimonial/AddTestimonial" class="btn btn-outline-primary">Yeni Referans Girişi</a>
+

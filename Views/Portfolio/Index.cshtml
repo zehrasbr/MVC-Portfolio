@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+@Html.Partial("PartialHead")
+
+<body>
+    @Html.Partial("PartialNavbar")
+    @Html.Action("PartialFeature")   <!-- Action dinamik veri çekmek için. Partial statik sayfalar için -->
+    @Html.Action("PartialWhoIAm")
+    @*@Html.Action("MyResume")*@
+    @Html.Action("PartialService")
+    @Html.Action("PartialStatistic")
+    @Html.Action("PartialTestimonial")
+    @Html.Action("PartialVideo")
+    @Html.Action("PartialFooter")
+    @Html.Action("PartialScript")
+
+
+
+
+</body>
+
+</html>

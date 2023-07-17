@@ -1,0 +1,30 @@
+﻿@model List<CasgemPortfolio.Models.Entities.TblFeature>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2>Ben Kimim(İlk Alan)</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>Resim</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.FeatureId</td>
+            <td>@item.FeatureTitle</td>
+            <td>@item.FeatureDescription</td>
+            <td>@item.FeatureImageURL</td>
+            <td><a href="/WhoAmI/UpdateFeature/@item.FeatureId" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+
+

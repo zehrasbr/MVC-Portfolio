@@ -1,0 +1,45 @@
+﻿@model CasgemPortfolio.Models.Entities.TblMessage
+
+@{
+    ViewBag.Title = "MessageDetails";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+@*<h2>Mesaj Detayları</h2>
+    Konu: @Html.DisplayFor(x => x.MessageSubject)
+    <br />
+    Gönderen: @Html.LabelFor(x => x.NameSurname)
+    <br />
+    Mail Adresi: @Html.LabelFor(x => x.SenderMail)
+    <br />
+    Mesaj: @Html.LabelFor(x => x.Content)*@
+
+
+
+<div class="card card-primary card-outline">
+    <!-- /.card-header -->
+    <div class="card-body p-0">
+        <div class="mailbox-read-info">
+            <h6 class="text-primary">Gönderen</h6>
+            <h6>
+                @Html.DisplayFor(x => x.SenderMail)
+                <br />
+                <span>@Html.DisplayFor(x => x.NameSurName)</span>
+            </h6>
+            <hr />
+        </div>
+        <div class="mailbox-read-message">
+            <h6 class="text-primary">Konu</h6>
+            <p>@Html.DisplayFor(x => x.MessageSubject)</p>
+
+            <p>
+                <hr />
+                <h6 class="text-primary">İçerik</h6>
+                @Html.DisplayFor(x => x.Content)
+            </p>
+
+            <p></p>
+        </div>
+    </div>
+</div>
+

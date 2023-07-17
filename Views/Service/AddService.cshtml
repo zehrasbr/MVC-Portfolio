@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "AddService";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2>Yeni Hizmet Ekleme Sayfası</h2>
+<form method="post">
+    <label>Hizmet Başlığı</label>
+    <input type="text" name="ServiceTitle" class="form-control" />
+    <br />
+    <label>Hizmet İkonu</label>
+    <input type="text" name="ServiceIcon" class="form-control" />
+    <br />
+    <label>Hizmet Numarası</label>
+    <input type="text" name="ServiceNumber" class="form-control">
+    <br />
+    <label>Hizmet İçeriği</label>
+    <input type="text" name="ServiceContent" class="form-control" />
+    <br />
+    <button class="btn btn-info">Hizmeti Kaydet</button>
+</form>
+

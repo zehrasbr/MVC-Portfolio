@@ -1,0 +1,21 @@
+﻿@model List<CasgemPortfolio.Models.Entities.TblResume>
+
+@foreach (var item in Model)
+{
+
+    <div class="py-5 w3l-resume">
+        <div class="container py-lg-5 py-3">
+            <h5 class="title-small mb-2">@item.Title1</h5>
+            <h3 class="title-big mb-4">@item.Title2 </h3>
+            <p>
+                @item.Description
+            </p>
+            <div class="mt-5">
+                <a href="#download" class="btn btn-style btn-primary">Cv' mi indir</a>
+            </div>
+        </div>
+    </div>
+
+}
+
+

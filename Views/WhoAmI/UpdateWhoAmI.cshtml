@@ -1,0 +1,19 @@
+﻿@model CasgemPortfolio.Models.Entities.TblWhoAmI
+@{
+    ViewBag.Title = "UpdateWhoAmI";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2>Ben Kimim Güncelleme Sayfası</h2>
+<form method="post">
+    @Html.HiddenFor(x => x.WhoId)
+    @Html.Label("Ben Kimim Başlığı")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-success">Güncelle</button>
+</form>
+

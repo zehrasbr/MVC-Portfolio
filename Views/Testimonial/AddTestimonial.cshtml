@@ -1,0 +1,26 @@
+﻿@model CasgemPortfolio.Models.Entities.TblTestimonial
+
+@{
+    ViewBag.Title = "AddTestimonial";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2>Yeni Referans Ekleme Sayfası</h2>
+<br />
+@using (Html.BeginForm("AddTestimonial", "Testimonial", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.Label("Ad Soyad")
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ülke / Şehir")
+    @Html.TextBoxFor(x => x.Country, new { @class = "form-control" })
+    <br />
+    @Html.Label("İçerik")
+    @Html.TextBoxFor(x => x.TestimonialContent, new { @class = "form-control" })
+    <br />
+    @Html.Label("Resim")
+    <input type="file" name="ImageURL" />
+    <br />
+    <input type="submit" value="Kaydet" class="btn btn-outline-success" />
+}
+

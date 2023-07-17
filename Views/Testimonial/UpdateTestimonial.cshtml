@@ -1,0 +1,22 @@
+﻿@model CasgemPortfolio.Models.Entities.TblTestimonial
+@{
+    ViewBag.Title = "UpdateTestimonial";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2>Referans Güncelleme Sayfası</h2>
+<form method="post">
+    @Html.HiddenFor(x => x.TestimonialId)
+    @Html.Label("Ad Soyad")
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ülke / Şehir")
+    @Html.TextBoxFor(x => x.Country, new { @class = "form-control" })
+    <br />
+    @Html.Label("İçerik")
+    @Html.TextBoxFor(x => x.TestimonialContent, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-success">Referansı Güncelle</button>
+</form>
+

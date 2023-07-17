@@ -1,0 +1,25 @@
+﻿@model CasgemPortfolio.Models.Entities.TblService
+@{
+    ViewBag.Title = "UpdateService";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2>Hizmet Güncelleme Sayfası</h2>
+<form method="post">
+    @Html.HiddenFor(x => x.ServiceId)
+    @Html.Label("Hizmet Başlığı")
+    @Html.TextBoxFor(x => x.ServiceTitle, new { @class = "form-control" })
+    <br />
+    @Html.Label("Hizmet İkonu")
+    @Html.TextBoxFor(x => x.ServiceIcon, new { @class = "form-control" })
+    <br />
+    @Html.Label("Hizmet Servis Numarası")
+    @Html.TextBoxFor(x => x.ServiceNumber, new { @class = "form-control" })
+    <br />
+    @Html.Label("Hizmet İçeriği")
+    @Html.TextBoxFor(x => x.ServiceContent, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-success">Hizmeti Güncelle</button>
+</form>
+
